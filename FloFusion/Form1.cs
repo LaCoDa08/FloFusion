@@ -15,11 +15,20 @@ namespace FloFusion
     {
         Connection conn = new Connection();
         string username, password;
+
         public LoginForm()
         {
             InitializeComponent();
+            HidePassword();
         }
 
+        /// <summary>
+        /// When the button is clicked, the program will check if the username and password are correct 
+        /// by checking the database. If the username and password are correct, the program will show
+        /// the next form. If the username and password are incorrect, the program will show an error message.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -36,8 +45,8 @@ namespace FloFusion
                     {
                         MessageBox.Show("Login Successful");
                         this.Hide();
-                        MainForm mainForm = new MainForm();
-                        mainForm.Show();
+                        Form2 Form2 = new Form2();
+                        Form2.Show();
                         
                     }
                     else
@@ -46,6 +55,20 @@ namespace FloFusion
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Hides the password as the user types it in.
+        /// </summary>
+        private void HidePassword()
+        {
+            txtPassword.Text = "";
+            txtPassword.PasswordChar = '*';
+            txtPassword.MaxLength = 14;
         }
 
         private void Form1_Load(object sender, EventArgs e)

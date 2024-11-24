@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,59 @@ using System.Windows.Forms;
 
 namespace FloFusion
 {
-    public partial class Form2 : Form
+    public partial class EmployeeForm : Form
     {
-        public Form2()
+        Connection conn = new Connection();
+
+        public EmployeeForm()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            lblWelcome.Text = $"Welcome,{GetEmployeeName()}!";
+        }
 
+        private object GetEmployeeName()
+        {
+            string name = "Employee";
+            try
+            {
+                int ID = LoginInfo.EmployeeID;
+                string query = $"SELECT employeeName FROM employee WHERE employeeID = {ID}";
+                conn.OpenConnection();
+                MySqlDataReader reader = conn.DataReader(query);
+                if (reader.Read())
+                {
+                    name = reader["employeeName"].ToString();
+                }
+                conn.CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting employee name: " + ex.Message);
+            }
+            return name;
+        }
+
+        private void btnRequestTimeOff_Click(object sender, EventArgs e)
+        {
+            TimeOffRequestForm timeOffRequestForm = new TimeOffRequestForm();
+            timeOffRequestForm.ShowDialog();
+        }
+
+        private void btnViewSchedule_Click(object sender, EventArgs e)
+        {
+            // Placeholder for schedule viewing functionality
+            MessageBox.Show("View Schedule feature coming soon!");
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }

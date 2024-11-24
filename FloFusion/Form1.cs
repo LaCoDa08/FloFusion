@@ -14,7 +14,7 @@ namespace FloFusion
     public partial class LoginForm : Form
     {
         Connection conn = new Connection();
-        string username, password;
+        public string username, password;
 
         public LoginForm()
         {
@@ -44,10 +44,11 @@ namespace FloFusion
                     if (reader.Read())
                     {
                         MessageBox.Show("Login Successful");
+                        LoginInfo.Username = username;
+                        LoginInfo.EmployeeID = reader.GetInt32("employeeID");
                         this.Hide();
-                        Form2 Form2 = new Form2();
-                        Form2.Show();
-                        
+                        EmployeeForm EmployeeForm = new EmployeeForm();
+                        EmployeeForm.Show();                 
                     }
                     else
                     {

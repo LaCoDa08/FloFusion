@@ -16,7 +16,7 @@ namespace FloFusion
         static string server = "localhost";
         static string database = "flofusion";
         static string uid = "root";
-        static string password = "PnckIs2Coo!"; // Add your password to your database
+        static string password = "******"; // Add your password to your database
         public static string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" 
             + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 

@@ -22,7 +22,7 @@ namespace FloFusion
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            lblWelcome.Text = $"Welcome,{GetEmployeeName()}!";
+            lblWelcome.Text = $"Welcome, {GetEmployeeName()}!";
         }
 
         private object GetEmployeeName()
@@ -53,13 +53,13 @@ namespace FloFusion
             timeOffRequestForm.ShowDialog();
         }
 
-        private void btnViewSchedule_Click(object sender, EventArgs e)
+        private void btnViewSchedule_Click_1(object sender, EventArgs e)
         {
-            // Placeholder for schedule viewing functionality
-            MessageBox.Show("View Schedule feature coming soon!");
+            ViewScheduleForm scheduleForm = new ViewScheduleForm();
+            scheduleForm.ShowDialog();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void btnLogout_Click_1(object sender, EventArgs e)
         {
             this.Close();
             LoginForm loginForm = new LoginForm();

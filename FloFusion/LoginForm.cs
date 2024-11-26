@@ -46,19 +46,51 @@ namespace FloFusion
                         MessageBox.Show("Login Successful");
                         LoginInfo.Username = username;
                         LoginInfo.EmployeeID = reader.GetInt32("employeeID");
-                        this.Hide();
-                        EmployeeForm EmployeeForm = new EmployeeForm();
-                        EmployeeForm.Show();                 
+                        reader.Close();
+
+                        string roleQuery = $"SELECT title FROM employee WHERE employeeID = {LoginInfo.EmployeeID}";
+                        MySqlDataReader roleReader = conn.DataReader(roleQuery);
+
+                        if (roleReader.Read())
+                        {
+                            string role = roleReader["title"].ToString();
+                            roleReader.Close();
+
+                            this.Hide();
+
+                            if (role.Equals("Manager", StringComparison.OrdinalIgnoreCase))
+                            {
+                                ManagerForm managerForm = new ManagerForm();
+                                managerForm.Show();
+                            }
+                            else
+                            {
+                                EmployeeForm employeeForm = new EmployeeForm();
+                                employeeForm.Show();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Unable to determine user role. Please contact support.");
+                        }
                     }
                     else
                     {
                         MessageBox.Show("Invalid Username or Password");
+                        reader.Close();
                     }
+
+                    conn.CloseConnection();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter both username and password.");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                conn.CloseConnection();
             }
         }
 

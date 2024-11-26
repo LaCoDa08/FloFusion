@@ -62,6 +62,7 @@
             this.btnViewSchedule.TabIndex = 2;
             this.btnViewSchedule.Text = "View Schedule";
             this.btnViewSchedule.UseVisualStyleBackColor = true;
+            this.btnViewSchedule.Click += new System.EventHandler(this.btnViewSchedule_Click_1);
             // 
             // btnLogout
             // 
@@ -71,6 +72,7 @@
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
             // 
             // EmployeeForm
             // 

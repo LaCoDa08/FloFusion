@@ -71,5 +71,11 @@ namespace FloFusion
             InputScheduleForm scheduleForm = new InputScheduleForm();
             scheduleForm.ShowDialog();
         }
+
+        private void btnOpenRegister_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
+        }
     }
 }

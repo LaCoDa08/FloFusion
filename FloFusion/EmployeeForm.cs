@@ -65,5 +65,11 @@ namespace FloFusion
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
+
+        private void btnOpenRegister_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
+        }
     }
 }

@@ -12,7 +12,6 @@ namespace FloFusion
     internal class Connection
     {
         MySql.Data.MySqlClient.MySqlConnection conn;
-        string myConnectionString;
         static string server = "localhost";
         static string database = "flofusion";
         static string uid = "root";

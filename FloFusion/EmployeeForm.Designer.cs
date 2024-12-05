@@ -32,6 +32,7 @@
             this.btnRequestTimeOff = new System.Windows.Forms.Button();
             this.btnViewSchedule = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnOpenRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -66,7 +67,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(20, 180);
+            this.btnLogout.Location = new System.Drawing.Point(20, 240);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(150, 40);
             this.btnLogout.TabIndex = 3;
@@ -74,11 +75,22 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
             // 
+            // btnOpenRegister
+            // 
+            this.btnOpenRegister.Location = new System.Drawing.Point(20, 180);
+            this.btnOpenRegister.Name = "btnOpenRegister";
+            this.btnOpenRegister.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenRegister.TabIndex = 4;
+            this.btnOpenRegister.Text = "Register";
+            this.btnOpenRegister.UseVisualStyleBackColor = true;
+            this.btnOpenRegister.Click += new System.EventHandler(this.btnOpenRegister_Click);
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnOpenRegister);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnViewSchedule);
             this.Controls.Add(this.btnRequestTimeOff);
@@ -97,5 +109,6 @@
         private System.Windows.Forms.Button btnRequestTimeOff;
         private System.Windows.Forms.Button btnViewSchedule;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnOpenRegister;
     }
 }

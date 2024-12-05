@@ -33,6 +33,7 @@
             this.btnApproveTimeOff = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnInputSchedule = new System.Windows.Forms.Button();
+            this.btnOpenRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -85,11 +86,22 @@
             this.btnInputSchedule.UseVisualStyleBackColor = true;
             this.btnInputSchedule.Click += new System.EventHandler(this.btnInputSchedule_Click);
             // 
+            // btnOpenRegister
+            // 
+            this.btnOpenRegister.Location = new System.Drawing.Point(176, 60);
+            this.btnOpenRegister.Name = "btnOpenRegister";
+            this.btnOpenRegister.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenRegister.TabIndex = 9;
+            this.btnOpenRegister.Text = "Register";
+            this.btnOpenRegister.UseVisualStyleBackColor = true;
+            this.btnOpenRegister.Click += new System.EventHandler(this.btnOpenRegister_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnOpenRegister);
             this.Controls.Add(this.btnInputSchedule);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnViewSchedule);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button btnApproveTimeOff;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnInputSchedule;
+        private System.Windows.Forms.Button btnOpenRegister;
     }
 }

@@ -20,11 +20,6 @@ namespace FloFusion
             InitializeComponent();
         }
 
-        private void txtReason_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string startDate = dtpStartDate.Value.ToString("yyyy-MM-dd");

@@ -102,7 +102,6 @@
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
             this.Text = "FloFusion";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

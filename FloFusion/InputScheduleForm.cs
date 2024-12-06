@@ -80,10 +80,5 @@ namespace FloFusion
             dtpStartTime.Value = DateTime.Now.Date;
             dtpEndTime.Value = DateTime.Now.Date;
         }
-
-        private void cmbEmployee_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

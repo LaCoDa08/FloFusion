@@ -15,7 +15,7 @@ namespace FloFusion
         static string server = "localhost";
         static string database = "flofusion";
         static string uid = "root";
-        static string password = "******"; // Add your password to your database
+        static string password = "PnckIs2Coo!"; // Add your password to your database
         public static string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" 
             + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
@@ -54,6 +54,15 @@ namespace FloFusion
         {
             conn.Close();
             conn.Dispose();
+        }
+
+        /// <summary>
+        /// Provides access to the connection object
+        /// </summary>
+        /// <returns>MySqlConnection</returns>
+        public MySqlConnection GetConnection()
+        {
+            return conn;
         }
 
         /// <summary>

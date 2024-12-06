@@ -34,6 +34,8 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnInputSchedule = new System.Windows.Forms.Button();
             this.btnOpenRegister = new System.Windows.Forms.Button();
+            this.btnOpenAddProduct = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -96,11 +98,33 @@
             this.btnOpenRegister.UseVisualStyleBackColor = true;
             this.btnOpenRegister.Click += new System.EventHandler(this.btnOpenRegister_Click);
             // 
+            // btnOpenAddProduct
+            // 
+            this.btnOpenAddProduct.Location = new System.Drawing.Point(176, 120);
+            this.btnOpenAddProduct.Name = "btnOpenAddProduct";
+            this.btnOpenAddProduct.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenAddProduct.TabIndex = 10;
+            this.btnOpenAddProduct.Text = "Add New Product";
+            this.btnOpenAddProduct.UseVisualStyleBackColor = true;
+            this.btnOpenAddProduct.Click += new System.EventHandler(this.btnOpenAddProduct_Click);
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.Location = new System.Drawing.Point(176, 180);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(150, 40);
+            this.btnAddEmployee.TabIndex = 11;
+            this.btnAddEmployee.Text = "Add New Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.btnOpenAddProduct);
             this.Controls.Add(this.btnOpenRegister);
             this.Controls.Add(this.btnInputSchedule);
             this.Controls.Add(this.btnLogout);
@@ -123,5 +147,7 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnInputSchedule;
         private System.Windows.Forms.Button btnOpenRegister;
+        private System.Windows.Forms.Button btnOpenAddProduct;
+        private System.Windows.Forms.Button btnAddEmployee;
     }
 }

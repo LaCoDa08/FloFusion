@@ -75,7 +75,6 @@
             this.txtReason.Name = "txtReason";
             this.txtReason.Size = new System.Drawing.Size(300, 20);
             this.txtReason.TabIndex = 4;
-            this.txtReason.TextChanged += new System.EventHandler(this.txtReason_TextChanged);
             // 
             // lblReason
             // 

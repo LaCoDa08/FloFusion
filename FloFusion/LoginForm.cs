@@ -103,10 +103,5 @@ namespace FloFusion
             txtPassword.PasswordChar = '*';
             txtPassword.MaxLength = 14;
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

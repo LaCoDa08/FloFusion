@@ -56,25 +56,6 @@ namespace FloFusion
             {
                 MessageBox.Show("Error loading product list: " + ex.Message);
             }
-
-            //try
-            //{
-            //    DataTable dt = new DataTable();
-            //    dt.Columns.Add("productID");
-            //    dt.Columns.Add("productName");
-            //    dt.Columns.Add("productPrice");
-
-            //    // Adding sample rows to see if they display correctly
-            //    dt.Rows.Add(1, "Apple", 0.99);
-            //    dt.Rows.Add(2, "Banana", 0.59);
-
-            //    dgvProductList.DataSource = dt;
-            //    Console.WriteLine("Product list loaded successfully.");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error loading product list: " + ex.Message);
-            //}
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
@@ -116,7 +97,7 @@ namespace FloFusion
                 conn.OpenConnection();
 
                 // Create transaction record
-                int companyId = 1; // Assuming there is only one company in the database
+                int companyId = 1;
                 string itemList = string.Join(",", selectedProducts);
                 string query = "INSERT INTO `transaction` (employeeID, companyID, itemList, timeAndDate) " +
                                $"VALUES ({LoginInfo.EmployeeID}, '{companyId}', '{itemList}', " +
@@ -210,9 +191,6 @@ namespace FloFusion
                 MessageBox.Show("Error generating receipt: " + ex.Message);
             }
         }
-
-
-
 
         private void UpdateTotal()
         {

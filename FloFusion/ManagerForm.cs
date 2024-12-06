@@ -77,5 +77,17 @@ namespace FloFusion
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
         }
+
+        private void btnOpenAddProduct_Click(object sender, EventArgs e)
+        {
+            AddProductForm addProductForm = new AddProductForm();
+            addProductForm.ShowDialog();
+        }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            AddEmployeeForm addEmployeeForm = new AddEmployeeForm();
+            addEmployeeForm.ShowDialog();
+        }
     }
 }
